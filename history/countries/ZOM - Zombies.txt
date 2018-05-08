@@ -1,0 +1,56 @@
+capital = 271
+
+oob = "ZOM_1936"
+
+set_politics = {
+
+  parties = {
+    democratic = { 
+      popularity = 0
+      banned = yes
+    }
+
+    fascism = {
+      popularity = 0
+      banned = yes
+    }
+    
+    communism = {
+      popularity = 0
+      banned = yes #default is no
+    }
+    neutrality = { 
+      popularity = 100
+    }
+  }
+  
+  ruling_party = neutrality
+  last_election = "1933.3.5"
+  election_frequency = 48
+  elections_allowed = no
+
+}
+
+create_faction = The Undead
+
+create_country_leader = {
+  name = "Patient 0"
+  desc = "POLITICS_AGUSTIN_PEDRO_JUSTO_DESC"
+  picture = "zombieleader.dds"
+  expire = "1965.1.1"
+  ideology = despotism
+  traits = {
+    #
+  }
+}
+
+set_technology = {
+  zombie_tech = 1
+}
+
+add_ideas = {
+  unleashed_power
+  closed_economy
+  tot_economic_mobilisation
+  scraping_the_barrel 
+}

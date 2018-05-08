@@ -1,0 +1,43 @@
+#Special Thanks To Infection Mod
+add_namespace = wars
+
+country_event = {
+  id = wars.1
+  title = wars.1.t
+  desc = wars.1.d
+  picture = GFX_report_event_soviet_soldiers
+
+  trigger = {
+    TAG = ZOM
+    has_capitulated = no
+    any_neighbor_country = {
+      AND = {
+        NOT = { has_war_with = FROM }
+        NOT = { is_in_faction_with = FROM }
+        NOT = { is_puppet_of = FROM }
+        NOT = { is_subject_of = FROM }
+      }
+    }
+  }
+  mean_time_to_happen = { days = 1 }
+
+  option = {
+    name = WAR
+    every_neighbor_country = {
+      if = {
+        limit = {
+          AND = {
+            NOT = { is_in_faction_with = FROM }
+            NOT = { has_war_with = FROM }
+            NOT = { is_puppet_of = FROM }
+            NOT = { is_subject_of = FROM }
+          }
+        } 
+        declare_war_on = {
+        target = FROM
+        type = annex_everything
+      }
+    }
+  }
+}
+}

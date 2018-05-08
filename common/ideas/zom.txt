@@ -1,0 +1,27 @@
+ideas = {
+
+  country = {
+    unleashed_power = {
+      
+      allowed = {
+        always = no
+      }
+
+      allowed_civil_war = {
+        always = yes
+      }
+
+      removal_cost = -1
+      
+      modifier = {
+        army_org_Factor = 9.9
+        army_morale_factor = 9.9
+        supply_consumption_factor = -0.75
+        ai_focus_aggressive_factor = 2.5 #1.8
+        political_power_gain = -6
+        local_resources_factor = 10.00
+      }
+    }
+
+}
+}
